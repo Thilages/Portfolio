@@ -13,7 +13,7 @@ const App = () => {
     // Simulate a loading delay for at least 1 second
     const timer = setTimeout(() => {
       setLoaded(true);
-    }, 1000);
+    }, 2000);
 
     return () => clearTimeout(timer); // Cleanup timer on unmount
   }, []);
@@ -25,7 +25,7 @@ const App = () => {
           <iframe className="w-[20vw] h-[20vw]" src="https://lottie.host/embed/08522a9e-1476-43ee-8a32-42478f9c0e25/GkqEYsaQUD.lottie"></iframe>
         </div>
       ) : (
-        <div className="relative overflow-x-hidden w-screen h-screen scroll-smooth">
+        <div className="relative overflow-x-hidden w-screen h-screen snap-y snap-mandatory">
           <Home />
           <Hero />
           <Services />
