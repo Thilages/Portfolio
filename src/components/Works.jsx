@@ -1,9 +1,9 @@
 import React from 'react';
 // Assuming images are correctly placed relative to the public folder or imported
-import greenpick from "/assets/greenpick.png"; // Use this if assets is in public
-import expenser from "/assets/expenser.jpg";   // Use this if assets is in public
-import screensense from "/assets/screensense.png"
-import solarsystem from "/assets/solarsystem.png"
+import greenpick from "../assets/greenpick.png"; // Use this if assets is in public
+import expenser from "../assets/expenser.jpg";   // Use this if assets is in public
+import screensense from "../assets/screensense.png"
+import solarsystem from "../assets/solarsystem.png"
 import { motion } from "framer-motion";
 import { FaReact, FaExternalLinkAlt, FaICursor } from 'react-icons/fa';
 import { SiTailwindcss, SiGreensock, SiExpo, SiChartdotjs } from 'react-icons/si';
@@ -79,14 +79,15 @@ const Works = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Delay between each child animation
+        duration: 0.3,
+        // Delay between each child animation
       },
     },
   };
 
   const itemVariants = {
     hidden: { x: -250, opacity: 0 },
-    visible: { x: 0, opacity: 1, transition: { duration: 0.7 } },
+    visible: { x: 0, opacity: 1, transition: { duration: 0.5 } },
   };
 
   const webTech = [
@@ -123,7 +124,7 @@ const Works = () => {
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ amount: 0.3 }}
+      viewport={{ amount: 0.1 }}
       variants={containerVariants}
       className='w-full min-h-screen snap-start 
                   overflow-y-auto scrollbar px-4 py-6 sm:px-6 

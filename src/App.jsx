@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import gif from "/assets/animation.gif"; // Correctly imported GIF
+ // Correctly imported GIF
 import Home from "./components/Home";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
@@ -25,7 +25,7 @@ const App = () => {
           <iframe className="w-[20vw] h-[20vw]" src="https://lottie.host/embed/08522a9e-1476-43ee-8a32-42478f9c0e25/GkqEYsaQUD.lottie"></iframe>
         </div>
       ) : (
-        <div className="relative overflow-x-hidden w-screen h-screen snap-y snap-mandatory">
+        <div className="relative overflow-x-hidden w-screen h-screen scroll-smooth">
           <Home />
           <Hero />
           <Services />
