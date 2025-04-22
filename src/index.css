@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+/* body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+} */
+
+/* Sets box-sizing to border-box */
+/* html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+} */
+
+@theme {
+  --font-Kanit: Kanit, "open-sans";
+  --font-NotoSans: Noto Sans, "sans-serif";
+  --font-WorkSans: Work Sans, "sans-serif";
+  --font-Outfit: Outfit, "sans-serif";
+  --color-primary-purple: #8c77f3;
+  --color-light-purple: #e0d8ff;
+}
+html {
+  scroll-behavior: smooth;
+}
+.box-2 {
+  background: linear-gradient(90deg, transparent 70%, #5b46cc 40%);
+  /* background-size: cover; */
+}
+
+.box-1 {
+  background: linear-gradient(155deg, transparent 70%, #a5acf3 30%);
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+/* Parent container enabling snapping */
+.snap-container {
+  scroll-snap-type: y mandatory; /* Snap along the vertical axis */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  height: 100vh; /* Full viewport height */
+}
+
+/* Individual sections */
+.snap-container > div {
+  scroll-snap-align: start; /* Snap to the start of each section */
+  height: 100vh; /* Full viewport height for each section */
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 0;
+}
+
+.gradient {
+  background: linear-gradient(220.55deg, #db5176 0%, #4e4484 100%);
+}
