@@ -86,8 +86,8 @@ const Works = () => {
   };
 
   const itemVariants = {
-    hidden: { x: -250, opacity: 0 },
-    visible: { x: 0, opacity: 1, transition: { duration: 0.5 } },
+    hidden: { x: -50, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 0.3 } },
   };
 
   const webTech = [
@@ -123,15 +123,16 @@ const Works = () => {
     // Use min-h-screen to ensure it takes at least full height but can grow
     <motion.div
       initial="hidden"
+      style={{ willChange: "transform, opacity" }}
       whileInView="visible"
       viewport={{ amount: 0.1 }}
       variants={containerVariants}
-      className='w-full min-h-screen snap-start 
-                  overflow-y-auto scrollbar px-4 py-6 sm:px-6 
+      className='w-full min-h-screen snap-always snap-start 
+                  overflow-y-scroll scrollbar px-4 py-6 sm:px-6 
                   md:px-8 lg:py-8 bg-gray-100 flex flex-col'>
 
       {/* Header Section */}
-      <motion.div variants={itemVariants} className='w-full flex flex-col md:flex-row justify-between md:items-end gap-2 mb-8 md:mb-10 lg:mb-12 text-gray-500'>
+      <motion.div variants={itemVariants} style={{ willChange: "transform, opacity" }} className='w-full flex flex-col md:flex-row justify-between md:items-end gap-2 mb-8 md:mb-10 lg:mb-12 text-gray-500'>
         <h1 className='text-3xl md:text-4xl lg:text-5xl text-left font-Outfit font-semibold text-gray-700'>
           Selected Works
         </h1>
@@ -141,12 +142,14 @@ const Works = () => {
       </motion.div>
 
       <motion.div initial="hidden"
+        style={{ willChange: "transform, opacity" }}
         whileInView="visible"
         viewport={{ amount: 0.1 }}
         variants={containerVariants} className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6 md:gap-8 flex-grow'>
 
         {/*greenpick  */}
         <motion.div initial="hidden"
+          style={{ willChange: "transform, opacity" }}
           whileInView="visible"
           viewport={{ amount: 0.1 }}
           variants={itemVariants} className='md:col-span-2 w-full h-fit p-4 md:p-5 relative rounded-lg shadow-lg bg-white border border-gray-200'>
@@ -172,6 +175,7 @@ const Works = () => {
 
         {/* Expenser */}
         <motion.div initial="hidden"
+          style={{ willChange: "transform, opacity" }}
           whileInView="visible"
           viewport={{ amount: 0.1 }}
           variants={itemVariants} className='w-full  h-full col-span-1 p-4 md:p-5 relative rounded-lg shadow-lg bg-white border border-gray-200 flex flex-col'>
@@ -198,6 +202,7 @@ const Works = () => {
 
         {/* screensense */}
         <motion.div initial="hidden"
+          style={{ willChange: "transform, opacity" }}
           whileInView="visible"
           viewport={{ amount: 0.1 }}
           variants={itemVariants} className='w-full h-full p-4 md:p-5 relative rounded-lg shadow-lg bg-white border border-gray-200 flex flex-col'>
@@ -225,6 +230,7 @@ const Works = () => {
 
         {/* solarsystem */}
         <motion.div initial="hidden"
+          style={{ willChange: "transform, opacity" }}
           whileInView="visible"
           viewport={{ amount: 0.1 }}
           variants={itemVariants} className='md:col-span-2 w-full h-fit p-4 md:p-5 relative rounded-lg shadow-lg bg-white border border-gray-200'>

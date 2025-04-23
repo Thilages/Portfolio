@@ -34,7 +34,8 @@ const Hero = () => {
 
   return (
     <motion.section
-      className="relative w-full h-screen overflow-x-hidden snap-start"
+      style={{ willChange: "transform, opacity" }}
+      className="relative w-full h-screen overflow-x-hidden snap-start snap-always"
       initial="hidden"
       whileInView="visible"
       viewport={{ amount: 0.3 }}
@@ -43,7 +44,7 @@ const Hero = () => {
       <Navbar />
       <main className="flex flex-col px-5 md:px-16 lg:px-24">
         {/* Name Intro */}
-        <motion.div className="flex mt-[20vh] items-center" variants={itemVariants}>
+        <motion.div style={{ willChange: "transform, opacity" }} className="flex mt-[20vh] items-center" variants={itemVariants}>
           <span className="w-[6vw] h-0 border border-[#5954b5]" />
           <div className="font-Outfit font-medium text-lg ml-2 max-sm:text-sm text-[#5954b5]">
             Thilagesh Waran
@@ -52,6 +53,7 @@ const Hero = () => {
 
         {/* Main Heading */}
         <motion.div
+          style={{ willChange: "transform, opacity" }}
           className="text-black text-4xl font-semibold md:text-6xl mt-5 font-Outfit"
           variants={itemVariants}
         >
@@ -60,15 +62,15 @@ const Hero = () => {
         </motion.div>
 
         {/* Animated Role */}
-        <motion.div className="flex justify-start items-center max-w-md mt-6" variants={itemVariants}>
-          <motion.div
+        <motion.div style={{ willChange: "transform, opacity" }} className="flex justify-start items-center max-w-md mt-6" variants={itemVariants}>
+          <motion.div style={{ willChange: "transform, opacity" }}
             className="w-fit px-2 py-2 rounded-md bg-[#5954b5]"
             key={roleIndex} // Re-render on role change
             initial={{ rotateX: 270, originY: 0.5 }} // Start position
             animate={{ rotateX: 360 }} // Rotate vertically around X-axis
             transition={{ duration: 0.4 }}
           >
-            <motion.div
+            <motion.div style={{ willChange: "transform, opacity" }}
               className="text-md md:text-xl lg:text-2xl text-white font-Outfit relative"
               key={roleIndex} // Re-render inner text when role changes
               initial={{ opacity: 0 }}
@@ -81,7 +83,7 @@ const Hero = () => {
         </motion.div>
 
         {/* Scroll Down Section */}
-        <motion.div
+        <motion.div style={{ willChange: "transform, opacity" }}
           className="flex items-center absolute font-Outfit text-gray-700 bottom-[10vh]"
           variants={itemVariants}
         >

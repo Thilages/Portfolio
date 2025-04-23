@@ -83,12 +83,12 @@ const Services = () => {
   return (
     <motion.div
       initial="hidden"
-
+      style={{ willChange: "transform, opacity" }}
       variants={containerVariants}
       whileInView="visible"
       viewport={{ amount: 0.3 }}
 
-      className="w-screen flex items-center snap-start overflow-y-scroll scrollbar px-5 md:px-8 py-5 md:py-8 bg-gray-100 flex-col"
+      className="w-screen flex items-center snap-always snap-start overflow-y-scroll scrollbar px-5 md:px-8 py-5 md:py-8 bg-gray-100 flex-col"
     >
 
       <div className="bg-[#8c77f3] rounded-md text-2xl md:text-4xl lg:text-5xl py-5 text-white font-Outfit px-5 md:px-20 md:py-10">
@@ -106,6 +106,7 @@ const Services = () => {
 
         <motion.div initial="hidden"
           whileInView="visible"
+          style={{ willChange: "transform, opacity" }}
           viewport={{ amount: 0.1 }}
           variants={containerVariants} className="lg:col-span-2 grid grid-cols-1 xl:grid-cols-2 gap-6 font-Outfit">
           {services.map((service) => (
@@ -114,6 +115,7 @@ const Services = () => {
               className="bg-white rounded-lg shadow-md p-6 relative flex flex-col border border-gray-100 h-full"
               initial="hidden"
               whileInView="visible"
+              style={{ willChange: "transform, opacity" }}
               viewport={{ amount: 0.2 }}
               variants={childVariants}
             >

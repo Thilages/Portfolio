@@ -24,9 +24,10 @@ const Home = () => {
       <div className="absolute w-full h-screen box-2 z-10"></div>
       <div className="absolute w-full h-screen box-1 z-10"></div>
       <motion.div
+        style={{ willChange: "transform, opacity" }}
         initial="hidden"
         whileInView="visible"
-        viewport={{amount:0.3}}
+        viewport={{ amount: 0.3 }}
         variants={containerVariants}
         className="absolute w-full h-full top-0 left-0 z-10"
       >
